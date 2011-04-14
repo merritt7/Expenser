@@ -1,0 +1,6 @@
+.expense-entry {
+    border: 1px solid black;
+    -moz-border-radius: 10px;
+    margin: 5px;
+    background-color: grey;
+}

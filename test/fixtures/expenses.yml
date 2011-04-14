@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  id: 1
+  description: MyString
+  amount: 
+  latitude: 
+  longitude: 
+  tags: 1
+
+two:
+  id: 1
+  description: MyString
+  amount: 
+  latitude: 
+  longitude: 
+  tags: 1

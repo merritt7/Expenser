@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Id:</b>
+  <%= @expense.id %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @expense.description %>
+</p>
+
+<p>
+  <b>Amount:</b>
+  <%= @expense.amount %>
+</p>
+
+<p>
+  <b>Latitude:</b>
+  <%= @expense.latitude %>
+</p>
+
+<p>
+  <b>Longitude:</b>
+  <%= @expense.longitude %>
+</p>
+
+<p>
+  <b>Tags:</b>
+  <%= @expense.tags %>
+</p>
+
+
+<%= link_to 'Edit', edit_expense_path(@expense) %> |
+<%= link_to 'Back', expenses_path %>

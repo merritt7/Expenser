@@ -1,0 +1,41 @@
+<h1>All Expenses</h1>
+
+<!--<table>
+  <tr>
+    <th>Description</th>
+    <th>Location</th>
+    <th>Amount</th>
+    <th>Latitude</th>
+    <th>Longitude</th>
+    <th>Tags</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @expenses.each do |expense| %>
+  <tr>
+    <td><%= expense.description %></td>
+    <td><%= expense.location %></td>
+    <td><%= expense.amount %></td>
+    <td><%= expense.latitude %></td>
+    <td><%= expense.longitude %></td>
+    <td><%= expense.tags %></td>
+    <td><%= link_to 'Show', expense %></td>
+    <td><%= link_to 'Edit', edit_expense_path(expense) %></td>
+    <td><%= link_to 'Destroy', expense, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table> -->
+
+<% @expenses.each do |e| %>
+  <div class="expense-entry">
+    <h1><%= e.description %></h1>
+    <p><%= e.location %><h2><%= e.amount %></h2></p>
+  </div>
+<% end %>
+
+<br />
+<h1>Total Amount: <%= @total %></h1>
+
+<%= link_to 'New Expense', new_expense_path %>
