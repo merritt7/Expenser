@@ -4,7 +4,7 @@ class ExpensesController < ApplicationController
   # GET /expenses.xml
   def index
     @title = "All Expenses"
-    @expenses = Expense.all
+    @expenses = Expense.all.reverse
     
     #Calculate Total amount of expenses
     @total = 0.0
