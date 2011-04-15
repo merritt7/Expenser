@@ -2,22 +2,23 @@ include GeoKit::Geocoders
 
 class Expense < ActiveRecord::Base
   attr_writer :tag_names
-  attr_accessible :id, :description, :amount, :location
+  attr_accessible :id, :description, :amount, :location, :tag_names
 
   has_many :tags, :through => :taggings
   has_many :taggings, :dependent => :destroy
 
   validates :location, :presence => true
-#  validates :description, :presence => true
-#  validates :amount, :presence => true
+  validates :description, :presence => true
+  validates :amount, :presence => true
+
+  #This method is not called even with <%= Expense.tag_names %>
+  def tag_names  
+    tags.map(&:name).join(' ')  
+  end
 
   before_save :geocode
   after_save :save_tags
-
-  def tag_names  
-    @tag_names || tags.map(&:name).join(' ')  
-  end  
-  
+    
 private
 
   def geocode
